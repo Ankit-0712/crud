@@ -6,10 +6,42 @@
                     <h4>Registration</h4>
                 </div>
                 <div class="card-body">
-
+                    <form [formGroup]="userForm">
+                    <div class="row">
+                         <div class="col-xl-6">
+                            <label for="" class="form-label">First Name</label>
+                            <input type="text" class="form-control" formControlName="firstName">
+                        </div>
+                        <div class="col-xl-6">
+                            <label for="" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" formControlName="lastName">
+                        </div>
+                        <div class="col-xl-6">
+                            <label for="" class="form-label">E-mail</label>
+                            <input type="text" class="form-control" formControlName="email">
+                        </div>
+                        <div class="col-xl-6">
+                            <label for="" class="form-label">Contact</label>
+                            <input type="text" class="form-control" formControlName="Contact">
+                        </div>
+                        <div class="col-xl-6">
+                            <label for="" class="form-label">Skill</label>
+                            <input type="text" class="form-control" formControlName="skill">
+                        </div>
+                        <div class="col-xl-6">
+                            <label for="" class="form-label">Age</label>
+                            <input type="text" class="form-control" formControlName="age">
+                        </div>
+                        <div class="col-xl-6">
+                            <label for="" class="form-label">Gender</label>
+                            <input type="text" class="form-control" formControlName="gender">
+                        </div> 
+                        
+                    </div>
+                </form>
                 </div>
                 <div class="card-footer">
-                    <div class="button btn btn-success float-end">Register</div>
+                    <button class="button btn btn-success float-end" type="button" (click)="submit()">Register</button>
                 </div>
             </div>
         </div>

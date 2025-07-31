@@ -7,7 +7,7 @@ export const routes: Routes = [
     
     {path:'',component:UserList},
     {path:'create',component:UsersCreate},
-    {path:'update',component:UsersUpdate}
+    {path:'update/:id',component:UsersUpdate}
 
 
     

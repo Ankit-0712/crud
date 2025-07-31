@@ -58,3 +58,15 @@ exports.deleteUser = async (req, res) => {
     }
 };
 
+exports.getUsersById = async(req,res)=>{
+     try {
+        const{id} = req.params;
+        const result=await Users.findOne({_id:id})
+
+        res.status(200).json({ result });
+    } catch (e) {
+        console.error(e);
+        res.status(500).json({ msg: 'Internal server error' });
+    }
+} 
+
