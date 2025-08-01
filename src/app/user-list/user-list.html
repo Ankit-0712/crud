@@ -25,7 +25,7 @@
                         <td style="text-align: center">
                             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                                 <button type="button" class="btn btn-success" [routerLink]="'/update/'+item._id">Edit</button>
-  <button type="button" class="btn btn-danger">Delete</button>
+  <button type="button" class="btn btn-danger"(click)="deleteUser(item._id)">Delete</button>
   
 </div>
                         </td>

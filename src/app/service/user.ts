@@ -5,9 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class User {
-  updateUser(userId: string, value: any) {
-    throw new Error('Method not implemented.');
-  }
+ 
 
   url = 'http://localhost:3000/api/'
   constructor(private http:HttpClient){}
@@ -22,6 +20,14 @@ export class User {
 
   getUserbyId(id: any){
     return this.http.get(this.url+"users/"+id)
+  }
+
+  updateUser(data:any){
+    return this.http.put(this.url+"users",data)
+  }
+
+  deleteUser(id:any){
+    return this.http.delete(this.url+"users/"+id)
   }
 
 }

@@ -32,10 +32,17 @@ exports.postUsers = async (req, res) => {
 
 exports.updateUsers = async (req, res) => {
     try {
-        const{id,firstName,lastName,email,Contact,gender,skill} = req.body;
+        const{id,firstName,lastName,age,email,Contact,gender,skill} = req.body;
         const user=await Users.findByIdAndUpdate({_id:id},{
             $set:{
-             skill:skill 
+             skill:skill,
+             Contact:Contact,
+             age:age,
+             email:email,
+             firstName:firstName,
+             lastName:lastName,
+             gender:gender,
+             
             }
         },{new:true})
 
